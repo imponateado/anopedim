@@ -32,13 +32,13 @@ removelist = []
 
 
 #hardcoded words to remove that you're sure you don't want to see
-hardcodedwordstoremove = ['marketing', 'mídias sociais', 'midias sociais', 'parrilha', 'parrilheiro', 'cozinheiro', 'pedagogo', 'pedagogia', 'professora', 'experiência em clínicas', 'superior completo em administração', 'professor', 'salgadeiro', 'salgadeira', 'superior em ciências contábeis', 'atendente', 'vendedor', 'vendedora', 'sexo feminino', 'vendas', 'eletricista', 'licitações', 'segurança do trabalho', 'segurança de trabalho', 'babá', 'recepcionista', 'experiência na área imobiliária', 'designer', 'design gráfico', 'experiência', 'dexion', 'refrigeração']
+hardcodedwordstoremove = ['marketing', 'mídias sociais', 'midias sociais', 'parrilha', 'parrilheiro', 'cozinheiro', 'pedagogo', 'pedagogia', 'professora', 'experiência em clínicas', 'superior completo em administração', 'professor', 'salgadeiro', 'salgadeira', 'superior em ciências contábeis', 'atendente', 'vendedor', 'vendedora', 'sexo feminino', 'vendas', 'eletricista', 'licitações', 'segurança do trabalho', 'segurança de trabalho', 'babá', 'recepcionista', 'experiência na área imobiliária', 'designer', 'design gráfico', 'experiência', 'dexion', 'refrigeração', 'mestre de obras', 'licitação', 'autocad', 'auto cad', 'engenheiro', 'engenheira', 'mecanico', 'enfermagem', 'carpinteiro', 'serralheiro', 'menor aprendiz', 'camareira', 'terapeuta']
 
 for x in hardcodedwordstoremove:
     words = [v for v in words if x not in v]
 
 #notremovestrings
-notremovestrings = ['técnico de ti', 'técnico em ti', 'aux admin', 'auxiliar administrativo']
+notremovestrings = ['técnico de ti', 'técnico em ti', 'aux admin', 'auxiliar administrativo', ' técnico de informática', 'tecnico de informatica', 'tecnico em ti', 'tecnico de ti', '']
 
 #outputing all messages
 print("Mensagens: ")
