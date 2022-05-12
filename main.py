@@ -15,7 +15,7 @@ elif len(sys.argv) == 2:
         print("O argumento não é um arquivo!")
         exit()
 
-#since whatsapp exports a plain text chat delimiter is used to, guess what, delimite when a message starts and when It finishes.
+#since whatsapp exports a plain text chat, a delimiter is used to say where a message starts and where It finishes.
 delimiter = ''
 
 #opens the file
@@ -32,13 +32,13 @@ removelist = []
 
 
 #hardcoded words to remove that you're sure you don't want to see
-hardcodedwordstoremove = ['marketing', 'mídias sociais', 'midias sociais', 'parrilha', 'parrilheiro', 'cozinheiro', 'pedagogo', 'pedagogia', 'professora', 'experiência em clínicas', 'superior completo em administração', 'professor', 'salgadeiro', 'salgadeira', 'superior em ciências contábeis', 'atendente', 'vendedor', 'vendedora', 'sexo feminino', 'vendas', 'eletricista', 'licitações', 'segurança do trabalho', 'segurança de trabalho', 'babá', 'recepcionista', 'experiência na área imobiliária', 'designer', 'design gráfico', 'experiência', 'dexion', 'refrigeração', 'mestre de obras', 'licitação', 'autocad', 'auto cad', 'engenheiro', 'engenheira', 'mecanico', 'enfermagem', 'carpinteiro', 'serralheiro', 'menor aprendiz', 'camareira', 'terapeuta']
+hardcodedwordstoremove = ['marketing', 'mídias sociais', 'midias sociais', 'parrilha', 'parrilheiro', 'cozinheiro', 'pedagogo', 'pedagogia', 'professora', 'experiência em clínicas', 'superior completo em administração', 'professor', 'salgadeiro', 'salgadeira', 'superior em ciências contábeis', 'atendente', 'vendedor', 'vendedora', 'sexo feminino', 'vendas', 'eletricista', 'licitações', 'segurança do trabalho', 'segurança de trabalho', 'babá', 'recepcionista', 'experiência na área imobiliária', 'designer', 'design gráfico', 'dexion', 'refrigeração', 'mestre de obras', 'licitação', 'autocad', 'auto cad', 'engenheiro', 'engenheira', 'mecanico', 'enfermagem', 'carpinteiro', 'serralheiro', 'menor aprendiz', 'camareira', 'terapeuta']
 
 for x in hardcodedwordstoremove:
     words = [v for v in words if x not in v]
 
 #notremovestrings
-notremovestrings = ['técnico de ti', 'técnico em ti', 'aux admin', 'auxiliar administrativo', ' técnico de informática', 'tecnico de informatica', 'tecnico em ti', 'tecnico de ti', '']
+notremovestrings = ['técnico de informática', 'tecnico de informatica', 'técnico em informática', 'tecnico em informatica', 'aux. admin', 'auxiliar administrativo']
 
 #outputing all messages
 print("Mensagens: ")
@@ -59,6 +59,7 @@ while remove != "pronto":
         print("Total de mensagens: " + str(len(words)) + ".\n")
         #asks user for a word to find and remove
         remove = input("Removedor: ")
+        removelist.append(remove)
     else:
         #removes messages containing certain word
         for i in words:
